@@ -42,3 +42,10 @@ test "Alert View", (target, app) ->
   alertViewsScreen.tapSecureTextEntryCell()
 
   alertViewsScreen.goBack()
+
+test "Buttons", (target, app) ->
+  mainScreen = new MainScreen()
+  mainScreen.tapButtonsCell()
+
+  buttonsScreen = new ButtonsScreen()
+  buttonsScreen.validate()
