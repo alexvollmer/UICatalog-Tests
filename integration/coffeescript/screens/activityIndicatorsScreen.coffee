@@ -28,7 +28,6 @@ class ActivityIndicatorsScreen extends Screen
     # NOTE: disabled for now since the images may differ based on
     # what cycle the activity indicators are in during their spin
 
-    # createImageAsserter("tuneup_js", "integration/tmp/results", "integration/screenshots")
     # assertScreenMatchesImageNamed("activity_indicators")
 
   tableView: ->

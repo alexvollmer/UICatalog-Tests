@@ -30,7 +30,6 @@ class AlertViewsScreen extends Screen
     })
 
     # Validate the appearance of the elements
-    createImageAsserter("tuneup_js", "integration/tmp/results", "integration/screenshots")
     assertScreenMatchesImageNamed("alert_views")
 
   tableView: ->

@@ -1,6 +1,9 @@
 #import "../../../../tuneup_js/tuneup.js"
 #import "../screens.js"
 
+# Setup image-assertion mechanism
+createImageAsserter("tuneup_js", "integration/tmp/results", "integration/screenshots")
+
 test "The main screen", (target, app) ->
   mainScreen = new MainScreen()
   mainScreen.validate()
