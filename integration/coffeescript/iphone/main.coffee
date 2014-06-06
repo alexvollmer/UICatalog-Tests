@@ -49,3 +49,19 @@ test "Buttons", (target, app) ->
 
   buttonsScreen = new ButtonsScreen()
   buttonsScreen.validate()
+
+  # no further behavior to validate here
+  buttonsScreen.goBack()
+
+test "Date Picker", (target, app) ->
+  mainScreen = new MainScreen()
+  mainScreen.tapDatePickerCell()
+
+  datePickerScreen = new DatePickerScreen()
+  datePickerScreen.validate()
+
+  datePickerScreen.assertDayPickerChangesLabel()
+  datePickerScreen.assertHourPickerChangesLabel()
+  datePickerScreen.assertMinutePickerChangesLabel()
+
+  datePickerScreen.goBack()
