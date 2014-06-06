@@ -6,3 +6,4 @@
 #import "screens/buttonsScreen.js"
 #import "screens/datePickerScreen.js"
 #import "screens/imageViewScreen.js"
+#import "screens/pageControlScreen.js"

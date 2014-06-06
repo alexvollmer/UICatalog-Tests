@@ -74,3 +74,11 @@ test "Image View", (target, app) ->
   imageViewScreen.validate()
 
   imageViewScreen.goBack()
+
+test "Page Control", (target, app) ->
+  mainScreen.tapPageControlCell()
+
+  pageControlScreen = new PageControlScreen()
+  pageControlScreen.validate()
+
+  pageControlScreen.goBack()
