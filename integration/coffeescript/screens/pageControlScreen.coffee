@@ -4,7 +4,7 @@ class PageControlScreen extends Screen
     this.logElementTree()
     assertWindow({
       navigationBar: { name: "Page Control" },
-      pageControls: [ {} ]
+      pageIndicators: [ {} ]
     })
 
     assertScreenMatchesImageNamed("page_control")

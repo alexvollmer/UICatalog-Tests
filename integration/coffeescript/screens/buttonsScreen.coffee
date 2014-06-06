@@ -1,7 +1,6 @@
 class ButtonsScreen extends Screen
 
   validate: ->
-    this.logElementTree()
     assertWindow({
       navigationBar: { name: "Buttons" },
       tableViews: [

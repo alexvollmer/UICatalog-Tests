@@ -24,7 +24,6 @@ test "Activity Indicators", (target, app) ->
 
   spinnersScreen = new ActivityIndicatorsScreen()
   spinnersScreen.validate()
-
   spinnersScreen.goBack()
 
 test "Alert View", (target, app) ->
@@ -38,7 +37,6 @@ test "Alert View", (target, app) ->
   alertViewsScreen.tapOtherCell()
   alertViewsScreen.tapTextEntryCell()
   alertViewsScreen.tapSecureTextEntryCell()
-
   alertViewsScreen.goBack()
 
 test "Buttons", (target, app) ->
@@ -46,8 +44,6 @@ test "Buttons", (target, app) ->
 
   buttonsScreen = new ButtonsScreen()
   buttonsScreen.validate()
-
-  # no further behavior to validate here
   buttonsScreen.goBack()
 
 test "Date Picker", (target, app) ->
@@ -59,7 +55,6 @@ test "Date Picker", (target, app) ->
   datePickerScreen.assertDayPickerChangesLabel()
   datePickerScreen.assertHourPickerChangesLabel()
   datePickerScreen.assertMinutePickerChangesLabel()
-
   datePickerScreen.goBack()
 
 test "Image View", (target, app) ->
@@ -67,7 +62,6 @@ test "Image View", (target, app) ->
 
   imageViewScreen = new ImageViewScreen()
   imageViewScreen.validate()
-
   imageViewScreen.goBack()
 
 test "Page Control", (target, app) ->
@@ -75,5 +69,84 @@ test "Page Control", (target, app) ->
 
   pageControlScreen = new PageControlScreen()
   pageControlScreen.validate()
-
   pageControlScreen.goBack()
+
+
+test "Picker View", (target, app) ->
+  mainScreen.tapPickerViewCell()
+
+  pickerViewScreen = new PickerViewScreen()
+  pickerViewScreen.validate()
+  pickerViewScreen.goBack()
+
+test "Progress Views", (target, app) ->
+  mainScreen.tapProgressViewsCell()
+
+  progressViewsScreen = new ProgressViewsScreen()
+  progressViewsScreen.validate()
+  progressViewsScreen.goBack()
+
+test "Segmented Controls", (target, app) ->
+  mainScreen.tapSegmentedControlsCell()
+
+  segmentedControlsScreen = new SegmentedControlsScreen()
+  segmentedControlsScreen.validate()
+  segmentedControlsScreen.goBack()
+
+test "Sliders", (target, app) ->
+  mainScreen.tapSlidersCell()
+
+  slidersScreen = new SlidersScreen()
+  slidersScreen.validate();
+  slidersScreen.goBack()
+
+test "Switches", (target, app) ->
+  mainScreen.tapSwitchesCell()
+
+  switchesScreen = new SwitchesScreen()
+  switchesScreen.validate()
+  switchesScreen.goBack()
+
+test "Text Fields", (target, app) ->
+  mainScreen.tapTextFieldsCell()
+
+  textFieldsScreen = new TextFieldsScreen()
+  textFieldsScreen.validate()
+  textFieldsScreen.goBack()
+
+test "Text Area", (target, app) ->
+  mainScreen.tapTextViewCell()
+
+  textViewScreen = new TextViewScreen()
+  textViewScreen.validate()
+  textViewScreen.goBack()
+
+test "Web View", (target, app) ->
+  mainScreen.tapWebViewCell()
+
+  webViewScreen = new WebViewScreen()
+  webViewScreen.validate()
+  webViewScreen.goBack()
+
+test "Search Bars", (target, app) ->
+  mainScreen.tapSearchBarsCell()
+
+  searchBarsScreen = new SearchBarsScreen()
+  searchBarsScreen.validate()
+
+  # Calling 'searchBarsScreen.goBack()' seems to fail because of a lost
+  # reference to the left navigation bar. Perhaps a side-effect of
+  # navigating in another level?
+  target.delay(1)
+  app.mainWindow().navigationBar().leftButton().tap()
+
+test "Toolbars", (target, app) ->
+  mainScreen.tapToolbarsCell()
+
+  toolbarsScreen = new ToolbarsScreen()
+  toolbarsScreen.validate()
+
+  # Calling 'toolbarsScreen.goBack()' seems to fail because of a lost
+  # reference to the left navigation bar. Perhaps a side-effect of
+  # navigating in another level?
+  target.frontMostApp().mainWindow().navigationBar().leftButton()

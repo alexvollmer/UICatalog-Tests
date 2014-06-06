@@ -1,7 +1,8 @@
 class MainScreen extends Screen
 
   validate: ->
-    # Programatically assert the structure of the screen
+    this.delay(3)  # wait for the scroll indicator to fade
+
     assertWindow({
       navigationBar: { name: "UICatalog" },
       tableViews: [
@@ -37,7 +38,8 @@ class MainScreen extends Screen
     this.window().tableViews()[0]
 
   tapCellWithName: (name) ->
-    this.tableView().cells().firstWithPredicate("name beginswith '" + name + "'").tap()
+    cell = this.tableView().cells().firstWithPredicate("name beginswith '" + name + "'")
+    cell.tap()
     this.delay(2)
 
   tapActionSheetsCell: ->
