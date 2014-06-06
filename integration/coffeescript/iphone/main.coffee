@@ -1,15 +1,15 @@
 #import "../../../../tuneup_js/tuneup.js"
 #import "../screens.js"
 
+mainScreen = new MainScreen()
+
 # Setup image-assertion mechanism
 createImageAsserter("tuneup_js", "integration/tmp/results", "integration/screenshots")
 
 test "The main screen", (target, app) ->
-  mainScreen = new MainScreen()
   mainScreen.validate()
 
 test "Action Sheets", (target, app) ->
-  mainScreen = new MainScreen()
   mainScreen.tapActionSheetsCell()
 
   actionSheetsScreen = new ActionSheetsScreen()
@@ -20,7 +20,6 @@ test "Action Sheets", (target, app) ->
   actionSheetsScreen.goBack()
 
 test "Activity Indicators", (target, app) ->
-  mainScreen = new MainScreen()
   mainScreen.tapActivityIndicatorsCell()
 
   spinnersScreen = new ActivityIndicatorsScreen()
@@ -29,7 +28,6 @@ test "Activity Indicators", (target, app) ->
   spinnersScreen.goBack()
 
 test "Alert View", (target, app) ->
-  mainScreen = new MainScreen()
   mainScreen.tapAlertViewsCell()
 
   alertViewsScreen = new AlertViewsScreen()
@@ -44,7 +42,6 @@ test "Alert View", (target, app) ->
   alertViewsScreen.goBack()
 
 test "Buttons", (target, app) ->
-  mainScreen = new MainScreen()
   mainScreen.tapButtonsCell()
 
   buttonsScreen = new ButtonsScreen()
@@ -54,7 +51,6 @@ test "Buttons", (target, app) ->
   buttonsScreen.goBack()
 
 test "Date Picker", (target, app) ->
-  mainScreen = new MainScreen()
   mainScreen.tapDatePickerCell()
 
   datePickerScreen = new DatePickerScreen()
@@ -67,7 +63,6 @@ test "Date Picker", (target, app) ->
   datePickerScreen.goBack()
 
 test "Image View", (target, app) ->
-  mainScreen = new MainScreen()
   mainScreen.tapImageViewCell()
 
   imageViewScreen = new ImageViewScreen()
