@@ -51,6 +51,3 @@ class ActionSheetsScreen extends Screen
     assertNotNull(safeChoice, "No 'Safe Choice' button found")
     assertEquals("Safe Choice", safeChoice.name())
     safeChoice.tap()
-
-  goBack: ->
-    this.navigationBar().leftButton().tap()

@@ -128,6 +128,3 @@ class AlertViewsScreen extends Screen
 
   tableView: ->
     this.window().tableViews()[0]
-
-  goBack: ->
-    this.window().navigationBar().leftButton().tap()

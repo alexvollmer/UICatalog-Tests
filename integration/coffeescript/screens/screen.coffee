@@ -6,6 +6,9 @@ class Screen
   navigationBar: ->
     this.window().navigationBar()
 
+  goBack: ->
+    this.navigationBar().leftButton().tap()
+
   logElementTree: ->
     this.window().logElementTree()
 
