@@ -65,3 +65,12 @@ test "Date Picker", (target, app) ->
   datePickerScreen.assertMinutePickerChangesLabel()
 
   datePickerScreen.goBack()
+
+test "Image View", (target, app) ->
+  mainScreen = new MainScreen()
+  mainScreen.tapImageViewCell()
+
+  imageViewScreen = new ImageViewScreen()
+  imageViewScreen.validate()
+
+  imageViewScreen.goBack()
